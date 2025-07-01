@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message from the Heart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            padding: 60px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 200% 0; }
+            50% { background-position: -200% 0; }
+        }
+
+        .message {
+            color: #2c3e50;
+            line-height: 1.8;
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .message p {
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .message p:nth-child(1) { animation-delay: 0.2s; }
+        .message p:nth-child(2) { animation-delay: 0.4s; }
+        .message p:nth-child(3) { animation-delay: 0.6s; }
+        .message p:nth-child(4) { animation-delay: 0.8s; }
+        .message p:nth-child(5) { animation-delay: 1.0s; }
+        .message p:nth-child(6) { animation-delay: 1.2s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart {
+            color: #e74c3c;
+            font-size: 24px;
+            opacity: 0;
+            animation: heartbeat 2s ease-in-out infinite, fadeIn 1s ease-out 1.5s forwards;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 30px auto;
+            border-radius: 2px;
+            opacity: 0;
+            animation: expandLine 1s ease-out 1.8s forwards;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 100px;
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                margin: 10px;
+            }
+            
+            .message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <p>Losing you feels like losing a piece of my soul, a part of myself that I can never get back. The world seems so much colder and quieter without your presence, and every day feels like I'm walking through a fog I can't escape.</p>
+            
+            <p>I replay our memories in my mind, over and over, holding on to every word you said, every smile you gave me. It's those little moments—your laughter, your touch, the way you made everything feel right—that I miss the most. They haunt me and comfort me all at once.</p>
+            
+            <p>The pain is relentless. It creeps into every quiet moment, every sleepless night, every corner of my mind. I keep questioning everything: Why did this have to happen? Could I have done something differently? My thoughts spiral endlessly, chasing answers I know I'll never find.</p>
+            
+            <p>Sometimes, I feel like I'm drowning in my own overthinking. The 'what-ifs' and the regrets are a heavy weight on my chest. If only I could go back—just once—to tell you how much you meant to me, to hold on just a little longer, to make sure you knew how deeply you were loved.</p>
+            
+            <p>Even in this overwhelming sadness, I try to cling to the love we shared. That love is the only thing that gives me hope, a small flicker of light in the darkness. I carry you with me in my heart, in my memories, and in every tear I shed. I hope one day the pain will ease, and I'll find a way to live with this loss while keeping your memory alive.</p>
+            
+            <p>For now, I'm just trying to breathe through the ache, one moment at a time. You were my everything, and nothing feels the same without you.</p>
+        </div>
+        
+        <div class="decorative-line"></div>
+        <div class="heart">♥</div>
+    </div>
+</body>
+</html>
